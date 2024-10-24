@@ -1,0 +1,294 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    transition: background-color 1s ease-in-out; /* Smooth background color transition */
+}
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('images/image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: #fff;
+}
+
+.logo span {
+    color: aqua; /* Updated color to bright blue for contrast */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4dc3ff; /* Bright blue on hover */
+}
+
+.cta {
+    background-color: #4dc3ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #3ba9e3; /* Slightly darker blue on hover */
+}
+
+.login-btn {
+    background-color: #ff8c00; /* New color for login button */
+}
+
+.login-btn:hover {
+    background-color: #e07b00; /* Darker orange on hover */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.hero span {
+    color: #ff8c00; /* Accent color for highlight */
+}
+
+.hero-cta {
+    margin-top: 20px;
+}
+
+/* Lightning Animation Background */
+/* Hero Section */
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+/* Hero Section with Normal Photo Background */
+.hero {
+    background: url('images/image.png') no-repeat center center fixed; /* Replace with your photo's path */
+    background-size: cover; /* Ensures the photo covers the entire section */
+}
+
+/* Hero content stays above the background */
+.hero-content {
+    z-index: 2;
+    color: #fff;
+}
+
+/* Optional: Adjust the opacity of the background with an overlay for better text visibility */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent overlay */
+    z-index: 1;
+}
+
+
+
+/* Lightning Animation Keyframes */
+@keyframes lightning-flash {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(1.3);
+    }
+}
+
+
+#services {
+    padding: 60px 0;
+    text-align: center;
+    min-height: 100vh;
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 1s ease-in-out; /* Smooth transition on background change */
+}
+
+/* Services background when scrolled */
+.change-bg {
+    background: url('images/img2.gif') no-repeat center center fixed; /* Add your GIF path here */
+    background-size: cover;
+}
+
+/* Cool animations for background change (optional) */
+.change-bg.fade-in {
+    animation: fadeInBackground 1s ease forwards; /* Apply fade-in animation */
+}
+
+
+.services h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #4dc3ff;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #161515;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #ff8c00;
+}
+
+.service-card p {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.service-card .cta {
+    background-color: #ff8c00;
+    color: #fff;
+}
+
+.service-card .cta:hover {
+    background-color: #e07b00;
+}
+
+/* About Section */
+.about {
+    padding: 60px;
+    background-color: #1c1c1c;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4dc3ff;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px;
+    background-color: #262626;
+    text-align: center;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.contact button {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Scroll-triggered Animations */
+[data-aos] {
+    transform: translateY(0);
+    opacity: 1;
+}
